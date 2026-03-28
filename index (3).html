@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mender Holistic Center | Rooted in Compassion & Science</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?v=2">
+    <style>
+        :root {
+            --sage-green: #9CAF88;
+            --warm-sand: #E8DDD4;
+            --soft-clay: #C4A77D;
+            --deep-forest: #5D6B53;
+            --cream: #FDFCFA;
+            --warm-white: #FFFFFF;
+            --charcoal: #3D3D3D;
+            --terracotta: #B97C5B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--warm-white);
+            color: var(--charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--cream);
+            border: 2px solid var(--sage-green);
+            border-radius: 30px;
+            padding: 5px;
+            display: flex;
+            gap: 5px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: var(--deep-forest);
+        }
+
+        .lang-btn.active {
+            background: var(--sage-green);
+            color: white;
+        }
+
+        .lang-btn:hover {
+            background: var(--warm-sand);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .butterfly-logo {
+            width: 50px;
+            height: 50px;
+            position: relative;
+        }
+
+        .butterfly-svg {
+            width: 100%;
+            height: 100%;
+            fill: var(--sage-green);
+            animation: gentleFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-5px) rotate(2deg); }
+        }
+
+        .logo-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--deep-forest);
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            font-size: 0.9rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--sage-green);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #FFFFFF 0%, #F5F9F2 50%, #EEF4EA 100%);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(156, 175, 136, 0.08) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 850px;
+            padding: 0 20px;
+            z-index: 1;
+        }
+
+        .hero-butterfly {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 25px;
+            animation: gentleFloat 8s ease-in-out infinite;
+        }
+
+        .hero-butterfly svg {
+            width: 100%;
+            height: 100%;
+            fill: var(--sage-green);
+            filter: drop-shadow(0 10px 30px rgba(156, 175, 136, 0.2));
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--deep-forest);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero-tagline {
+            font-size: 1.4rem;
+            color: var(--terracotta);
+            font-style: italic;
+            margin-bottom: 25px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--deep-forest);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            font-size: 1.05rem;
+            color: var(--charcoal);
+            margin-bottom: 35px;
+            line-height: 1.8;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--sage-green);
+            color: white;
+            box-shadow: 0 4px 15px rgba(156, 175, 136, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: var(--deep-forest);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(93, 107, 83, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--deep-forest);
+            border: 2px solid var(--sage-green);
+        }
+
+        .btn-secondary:hover {
+            background: var(--sage-green);
+            color: white;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 5%;
+            background: var(--warm-white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.3rem;
+            color: var(--deep-forest);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--charcoal);
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--cream);
+            padding: 30px 20px;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(156, 175, 136, 0.15);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--sage-green), var(--soft-clay));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+        }
+
+        .service-icon {
+            width: 55px;
+            height: 55px;
+            background: var(--sage-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 1.4rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--deep-forest);
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            color: var(--deep-forest);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .service-card p {
+            color: var(--charcoal);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about {
+            padding: 90px 5%;
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8FBF6 100%);
+            position: relative;
+        }
+
+        .about-container {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.3rem;
+            color: var(--deep-forest);
+            margin-bottom: 25px;
+        }
+
+        .about-text {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--charcoal);
+            margin-bottom: 35px;
+        }
+
+        .approach-box {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 18px;
+            margin: 35px 0;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.04);
+            border: 1px solid rgba(156, 175, 136, 0.15);
+        }
+
+        .approach-box h3 {
+            color: var(--deep-forest);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .approach-list {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .approach-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--charcoal);
+            font-size: 0.95rem;
+        }
+
+        .approach-item i {
+            color: var(--sage-green);
+            font-size: 1.1rem;
+        }
+
+        .values {
+            display: flex;
+            justify-content: center;
+            gap: 45px;
+            flex-wrap: wrap;
+            margin-top: 45px;
+        }
+
+        .value-item {
+            text-align: center;
+        }
+
+        .value-icon {
+            width: 55px;
+            height: 55px;
+            background: var(--sage-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        .value-item h4 {
+            color: var(--deep-forest);
+            font-size: 1.1rem;
+        }
+
+        /* Outcomes Section */
+        .outcomes {
+            padding: 70px 5%;
+            background: var(--warm-white);
+        }
+
+        .outcomes-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .outcome-item {
+            text-align: center;
+            padding: 25px 20px;
+            min-width: 180px;
+        }
+
+        .outcome-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--sage-green), var(--deep-forest));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: white;
+            font-size: 1.4rem;
+        }
+
+        .outcome-item h4 {
+            color: var(--deep-forest);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .outcome-item p {
+            color: var(--charcoal);
+            font-size: 0.9rem;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 5%;
+            background: linear-gradient(135deg, #F8FBF6 0%, #FFFFFF 100%);
+        }
+
+        .steps {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            max-width: 950px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 220px;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 55px;
+            height: 55px;
+            background: var(--sage-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 0 auto 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step h3 {
+            color: var(--deep-forest);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .step p {
+            color: var(--charcoal);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        /* Booking Section */
+        .booking {
+            padding: 90px 5%;
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8FBF6 100%);
+        }
+
+        .booking-container {
+            max-width: 750px;
+            margin: 0 auto;
+            background: white;
+            padding: 45px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            border: 1px solid rgba(156, 175, 136, 0.15);
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--deep-forest);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid var(--warm-sand);
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+            transition: border-color 0.3s ease;
+            background: var(--warm-white);
+            font-size: 0.95rem;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--sage-green);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 5%;
+            background: var(--deep-forest);
+            color: white;
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: var(--cream);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+
+        .contact-item i {
+            font-size: 1.4rem;
+            color: var(--sage-green);
+            margin-top: 5px;
+        }
+
+        .contact-item h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: var(--cream);
+        }
+
+        .contact-item p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+        }
+
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            padding: 35px;
+            border-radius: 18px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-form h3 {
+            font-size: 1.4rem;
+            margin-bottom: 22px;
+            color: var(--cream);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: white;
+            padding: 35px 5%;
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .footer-logo svg {
+            width: 38px;
+            height: 38px;
+            fill: var(--sage-green);
+        }
+
+        .footer-logo span {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin: 18px 0;
+        }
+
+        .social-links a {
+            width: 38px;
+            height: 38px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--sage-green);
+            transform: translateY(-3px);
+        }
+
+        .footer-text {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+
+            .service-card {
+                padding: 35px 25px;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .values {
+                gap: 30px;
+            }
+
+            .approach-list {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .outcomes-grid {
+                gap: 15px;
+            }
+
+            .outcome-item {
+                min-width: 140px;
+                padding: 20px 15px;
+            }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="#" class="logo">
+            <div class="butterfly-logo">
+                <svg class="butterfly-svg" viewBox="0 0 100 100">
+                    <path d="M50 50 Q30 20 10 30 Q5 40 20 50 Q5 60 10 70 Q30 80 50 50 Q70 80 90 70 Q95 60 80 50 Q95 40 90 30 Q70 20 50 50 Z"/>
+                    <line x1="50" y1="30" x2="50" y2="20" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="50" cy="20" r="3"/>
+                    <path d="M50 50 L50 80" stroke="currentColor" stroke-width="3"/>
+                </svg>
+            </div>
+            <span class="logo-text">Mender</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#booking">Book Session</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-butterfly">
+                <svg viewBox="0 0 100 100">
+                    <path d="M50 50 Q25 15 5 25 Q0 40 20 50 Q0 60 5 75 Q25 85 50 50 Q75 85 95 75 Q100 60 80 50 Q100 40 95 25 Q75 15 50 50 Z"/>
+                    <line x1="50" y1="25" x2="50" y2="10" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="50" cy="10" r="4"/>
+                    <path d="M50 50 L50 85" stroke="currentColor" stroke-width="3"/>
+                </svg>
+            </div>
+            <h1>Expat Anxiety & Adjustment Support</h1>
+            <p class="hero-tagline">Rooted in Compassion and Science</p>
+            <p class="hero-description">
+                Living abroad brings unique emotional challenges — anxiety, overthinking, loneliness, and the overwhelm of constant adjustment. You don't have to navigate this alone. I will walk with you to manage anxiety, reduce overthinking, combat loneliness, and find balance and calm. Using cognitive behavioral therapy, mindfulness practice, and science-based tools, I help expats gain relief, clarity, and emotional stability while adjusting to life in a new country.
+            </p>
+            <div class="cta-buttons">
+                <a href="#booking" class="btn btn-primary">Start Your Journey</a>
+                <a href="#services" class="btn btn-secondary">How I Can Help</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>How I Walk With You</h2>
+            <p>Practical support for expats managing anxiety, emotional stress, and life transitions abroad</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Manage Anxiety & Overthinking</h3>
+                <p>Calm your mind and break free from racing thoughts through proven CBT techniques that restore mental clarity and peace.</p>
+            </div>
+
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Reduce Emotional Stress & Overwhelm</h3>
+                <p>Find relief from emotional overwhelm and build lasting resilience to navigate life's transitions with greater ease.</p>
+            </div>
+
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-user-friends"></i>
+                </div>
+                <h3>Combat Loneliness & Reconnect</h3>
+                <p>Overcome isolation and rediscover meaningful connection, feeling emotionally supported even when far from home.</p>
+            </div>
+
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3>Find Balance & Emotional Stability</h3>
+                <p>Create daily habits that cultivate calm, clarity, and lasting emotional equilibrium in your new environment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes Section -->
+    <section class="outcomes">
+        <div class="section-header">
+            <h2>Your Outcome</h2>
+            <p>What you will gain from walking this path together</p>
+        </div>
+
+        <div class="outcomes-grid">
+            <div class="outcome-item fade-in">
+                <div class="outcome-icon">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <h4>Calm Your Mind</h4>
+                <p>Find inner peace and quiet the mental noise</p>
+            </div>
+
+            <div class="outcome-item fade-in">
+                <div class="outcome-icon">
+                    <i class="fas fa-compress-arrows-alt"></i>
+                </div>
+                <h4>Reduce Anxiety</h4>
+                <p>Stop overthinking and regain control</p>
+            </div>
+
+            <div class="outcome-item fade-in">
+                <div class="outcome-icon">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
+                <h4>Gain Relief</h4>
+                <p>Release the weight of emotional stress</p>
+            </div>
+
+            <div class="outcome-item fade-in">
+                <div class="outcome-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h4>Find Clarity</h4>
+                <p>See your path forward with confidence</p>
+            </div>
+
+            <div class="outcome-item fade-in">
+                <div class="outcome-icon">
+                    <i class="fas fa-anchor"></i>
+                </div>
+                <h4>Emotional Stability</h4>
+                <p>Build a foundation that lasts</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <h2>My Approach</h2>
+            <p class="about-text">
+                I understand the expat experience — the late-night overthinking, the waves of anxiety, the loneliness that creeps in when you least expect it. I will walk with you through this, as a fellow traveler who believes in your innate strength and capacity for growth. Together, we will use evidence-based tools to manage anxiety, reduce overthinking, and find the balance and calm that feel out of reach right now.
+            </p>
+
+            <div class="approach-box">
+                <h3>Methods I Use</h3>
+                <div class="approach-list">
+                    <div class="approach-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Cognitive Behavioral Therapy</span>
+                    </div>
+                    <div class="approach-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Mindfulness Practice</span>
+                    </div>
+                    <div class="approach-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Science-Based Habit Formation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="values">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h4>Compassion</h4>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h4>Science</h4>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <h4>Walking With You</h4>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h4>Practical Change</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="section-header">
+            <h2>How It Works</h2>
+            <p>Simple steps to start feeling supported and grounded</p>
+        </div>
+
+        <div class="steps">
+            <div class="step fade-in">
+                <div class="step-number">1</div>
+                <h3>Book a Free Consultation</h3>
+                <p>Schedule a 20-minute call to share what you're experiencing and see if we're a good fit</p>
+            </div>
+            <div class="step fade-in">
+                <div class="step-number">2</div>
+                <h3>Personalized Sessions</h3>
+                <p>We'll meet online at times that work for your schedule, wherever you are in the world</p>
+            </div>
+            <div class="step fade-in">
+                <div class="step-number">3</div>
+                <h3>Build Lasting Change</h3>
+                <p>Develop practical skills to manage anxiety, reduce stress, and find emotional stability</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <div class="booking-container">
+            <div class="section-header">
+                <h2>Book Your Session</h2>
+                <p>Take the first step toward calm, clarity, and emotional balance</p>
+            </div>
+
+            <form id="bookingForm" action="https://formspree.io/f/xdalqkwj" method="POST">
+                <input type="hidden" name="_subject" value="New Booking Request - Mender Holistic Center">
+                <input type="hidden" name="_next" value="https://menderholistic.com/booking-confirmed.html">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="full_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone" placeholder="+971" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Location/Time Zone</label>
+                        <input type="text" name="location" placeholder="e.g., Dubai, GMT+4" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>What brings you here?</label>
+                    <select name="primary_concern" required>
+                        <option value="">Select your main concern...</option>
+                        <option value="anxiety">Managing anxiety & overthinking</option>
+                        <option value="stress">Reducing emotional stress & overwhelm</option>
+                        <option value="loneliness">Combating loneliness & isolation</option>
+                        <option value="transition">Expat adjustment challenges</option>
+                        <option value="balance">Finding balance & calm</option>
+                        <option value="other">Something else</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Preferred Session Type</label>
+                        <select name="session_type" required>
+                            <option value="consultation">Free 20-min Consultation</option>
+                            <option value="single">Single Session</option>
+                            <option value="package">Session Package</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Day/Time</label>
+                        <input type="text" name="preferred_time" placeholder="e.g., Weekday evenings" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Tell me about your situation</label>
+                    <textarea name="message" rows="4" placeholder="Where are you located? What challenges are you facing? What are you hoping to achieve?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 25px;">
+                    Request a Session
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp" style="color: #25D366;"></i>
+                    <div>
+                        <h4>WhatsApp / Phone</h4>
+                        <p>
+                            <a href="https://wa.me/971508505701" target="_blank" style="color: #25D366; text-decoration: none; font-weight: 600;">+971 50 850 5701</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>hello@menderholistic.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <div>
+                        <h4>Service Area</h4>
+                        <p>Online Sessions Worldwide — Supporting Expats Everywhere</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send a Quick Message</h3>
+                <form action="https://formspree.io/f/xdalqkwj" method="POST">
+                    <input type="hidden" name="_subject" value="New Contact Message from Mender Website">
+                    <input type="hidden" name="_next" value="https://menderholistic.com/thanks.html">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <svg viewBox="0 0 100 100">
+                <path d="M50 50 Q30 20 10 30 Q5 40 20 50 Q5 60 10 70 Q30 80 50 50 Q70 80 90 70 Q95 60 80 50 Q95 40 90 30 Q70 20 50 50 Z"/>
+            </svg>
+            <span>Mender Holistic Center</span>
+        </div>
+
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+
+        <p class="footer-text">Rooted in Compassion and Science | Supporting Expats Worldwide</p>
+        <p style="margin-top: 10px; color: rgba(255,255,255,0.4); font-size: 0.8rem;">
+            © 2025 Mender Holistic Center. All rights reserved.
+        </p>
+    </footer>
+
+    <script>
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
