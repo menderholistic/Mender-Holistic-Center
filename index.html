@@ -12,11 +12,11 @@
     <style>
         :root {
             --sage-green: #9CAF88;
-            --warm-sand: #D4C4B5;
+            --warm-sand: #E8DDD4;
             --soft-clay: #C4A77D;
             --deep-forest: #5D6B53;
-            --cream: #F5F1E8;
-            --warm-white: #FAF8F5;
+            --cream: #FDFCFA;
+            --warm-white: #FFFFFF;
             --charcoal: #3D3D3D;
             --terracotta: #B97C5B;
         }
@@ -90,7 +90,7 @@
             justify-content: space-between;
             align-items: center;
             z-index: 999;
-            background: rgba(250, 248, 245, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
         }
@@ -171,7 +171,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, var(--cream) 0%, var(--warm-sand) 100%);
+            background: linear-gradient(135deg, #FFFFFF 0%, #F5F9F2 50%, #EEF4EA 100%);
             position: relative;
             overflow: hidden;
             padding-top: 80px;
@@ -184,7 +184,7 @@
             right: -20%;
             width: 80%;
             height: 150%;
-            background: radial-gradient(circle, rgba(156, 175, 136, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(156, 175, 136, 0.08) 0%, transparent 70%);
             animation: pulse 15s ease-in-out infinite;
         }
 
@@ -195,15 +195,15 @@
 
         .hero-content {
             text-align: center;
-            max-width: 800px;
+            max-width: 850px;
             padding: 0 20px;
             z-index: 1;
         }
 
         .hero-butterfly {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 30px;
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 25px;
             animation: gentleFloat 8s ease-in-out infinite;
         }
 
@@ -211,29 +211,39 @@
             width: 100%;
             height: 100%;
             fill: var(--sage-green);
-            filter: drop-shadow(0 10px 30px rgba(156, 175, 136, 0.3));
+            filter: drop-shadow(0 10px 30px rgba(156, 175, 136, 0.2));
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             color: var(--deep-forest);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             line-height: 1.2;
         }
 
         .hero-tagline {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: var(--terracotta);
             font-style: italic;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             font-family: 'Cormorant Garamond', serif;
         }
 
-        .hero-description {
+        .hero-subtitle {
             font-size: 1.1rem;
+            color: var(--deep-forest);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            font-size: 1.05rem;
             color: var(--charcoal);
-            margin-bottom: 40px;
+            margin-bottom: 35px;
             line-height: 1.8;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cta-buttons {
@@ -280,43 +290,45 @@
 
         /* Services Section */
         .services {
-            padding: 100px 5%;
+            padding: 80px 5%;
             background: var(--warm-white);
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         .section-header h2 {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             color: var(--deep-forest);
             margin-bottom: 15px;
         }
 
         .section-header p {
             color: var(--charcoal);
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
+            font-size: 1.05rem;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .service-card {
             background: var(--cream);
-            padding: 40px 30px;
-            border-radius: 20px;
+            padding: 30px 20px;
+            border-radius: 16px;
             text-align: center;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            border: 1px solid rgba(156, 175, 136, 0.15);
         }
 
         .service-card::before {
@@ -325,7 +337,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 5px;
+            height: 4px;
             background: linear-gradient(90deg, var(--sage-green), var(--soft-clay));
             transform: scaleX(0);
             transition: transform 0.4s ease;
@@ -336,84 +348,110 @@
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
         }
 
         .service-icon {
-            width: 80px;
-            height: 80px;
+            width: 55px;
+            height: 55px;
             background: var(--sage-green);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 25px;
-            font-size: 2rem;
+            margin: 0 auto 18px;
+            font-size: 1.4rem;
             color: white;
             transition: all 0.3s ease;
         }
 
         .service-card:hover .service-icon {
             background: var(--deep-forest);
-            transform: rotate(5deg) scale(1.1);
+            transform: scale(1.1);
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             color: var(--deep-forest);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            line-height: 1.4;
         }
 
         .service-card p {
             color: var(--charcoal);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        .service-tag {
-            display: inline-block;
-            background: var(--warm-sand);
-            color: var(--deep-forest);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-top: 15px;
-            font-weight: 500;
+            font-size: 0.88rem;
+            line-height: 1.6;
         }
 
         /* About Section */
         .about {
-            padding: 100px 5%;
-            background: linear-gradient(135deg, var(--cream) 0%, var(--warm-sand) 100%);
+            padding: 90px 5%;
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8FBF6 100%);
             position: relative;
         }
 
         .about-container {
-            max-width: 1000px;
+            max-width: 850px;
             margin: 0 auto;
             text-align: center;
         }
 
         .about h2 {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             color: var(--deep-forest);
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .about-text {
-            font-size: 1.1rem;
-            line-height: 2;
+            font-size: 1.05rem;
+            line-height: 1.9;
             color: var(--charcoal);
-            margin-bottom: 40px;
+            margin-bottom: 35px;
+        }
+
+        .approach-box {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 18px;
+            margin: 35px 0;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.04);
+            border: 1px solid rgba(156, 175, 136, 0.15);
+        }
+
+        .approach-box h3 {
+            color: var(--deep-forest);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .approach-list {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .approach-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--charcoal);
+            font-size: 0.95rem;
+        }
+
+        .approach-item i {
+            color: var(--sage-green);
+            font-size: 1.1rem;
         }
 
         .values {
             display: flex;
             justify-content: center;
-            gap: 50px;
+            gap: 45px;
             flex-wrap: wrap;
-            margin-top: 50px;
+            margin-top: 45px;
         }
 
         .value-item {
@@ -421,57 +459,102 @@
         }
 
         .value-icon {
+            width: 55px;
+            height: 55px;
+            background: var(--sage-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        .value-item h4 {
+            color: var(--deep-forest);
+            font-size: 1.1rem;
+        }
+
+        /* Outcomes Section */
+        .outcomes {
+            padding: 70px 5%;
+            background: var(--warm-white);
+        }
+
+        .outcomes-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .outcome-item {
+            text-align: center;
+            padding: 25px 20px;
+            min-width: 180px;
+        }
+
+        .outcome-icon {
             width: 60px;
             height: 60px;
-            background: var(--sage-green);
+            background: linear-gradient(135deg, var(--sage-green), var(--deep-forest));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 15px;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
 
-        .value-item h4 {
+        .outcome-item h4 {
             color: var(--deep-forest);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .outcome-item p {
+            color: var(--charcoal);
+            font-size: 0.9rem;
         }
 
         /* How It Works */
         .how-it-works {
-            padding: 100px 5%;
-            background: var(--warm-white);
+            padding: 80px 5%;
+            background: linear-gradient(135deg, #F8FBF6 0%, #FFFFFF 100%);
         }
 
         .steps {
             display: flex;
             justify-content: center;
-            gap: 40px;
-            max-width: 1000px;
+            gap: 35px;
+            max-width: 950px;
             margin: 0 auto;
             flex-wrap: wrap;
         }
 
         .step {
             flex: 1;
-            min-width: 250px;
+            min-width: 220px;
             text-align: center;
             position: relative;
         }
 
         .step-number {
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             background: var(--sage-green);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: bold;
-            margin: 0 auto 20px;
+            margin: 0 auto 18px;
             position: relative;
             z-index: 1;
         }
@@ -479,50 +562,54 @@
         .step h3 {
             color: var(--deep-forest);
             margin-bottom: 10px;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
 
         .step p {
             color: var(--charcoal);
-            font-size: 0.95rem;
+            font-size: 0.92rem;
+            line-height: 1.6;
         }
 
         /* Booking Section */
         .booking {
-            padding: 100px 5%;
-            background: var(--cream);
+            padding: 90px 5%;
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8FBF6 100%);
         }
 
         .booking-container {
-            max-width: 800px;
+            max-width: 750px;
             margin: 0 auto;
             background: white;
-            padding: 50px;
+            padding: 45px;
             border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            border: 1px solid rgba(156, 175, 136, 0.15);
         }
 
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 22px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 7px;
             color: var(--deep-forest);
             font-weight: 500;
+            font-size: 0.95rem;
         }
 
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 15px;
+            padding: 14px;
             border: 2px solid var(--warm-sand);
             border-radius: 10px;
             font-family: 'Montserrat', sans-serif;
             transition: border-color 0.3s ease;
             background: var(--warm-white);
+            font-size: 0.95rem;
         }
 
         .form-group input:focus,
@@ -535,101 +622,64 @@
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        /* Payment Section */
-        .payment-section {
-            margin-top: 30px;
-            padding-top: 30px;
-            border-top: 1px solid var(--warm-sand);
-        }
-
-        .payment-options {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .payment-option {
-            flex: 1;
-            min-width: 150px;
-            padding: 20px;
-            border: 2px solid var(--warm-sand);
-            border-radius: 10px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .payment-option:hover,
-        .payment-option.selected {
-            border-color: var(--sage-green);
-            background: rgba(156, 175, 136, 0.1);
-        }
-
-        .payment-option i {
-            font-size: 2rem;
-            color: var(--sage-green);
-            margin-bottom: 10px;
-            display: block;
+            gap: 18px;
         }
 
         /* Contact Section */
         .contact {
-            padding: 100px 5%;
+            padding: 80px 5%;
             background: var(--deep-forest);
             color: white;
         }
 
         .contact-container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 50px;
         }
 
         .contact-info h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
             color: var(--cream);
         }
 
         .contact-item {
             display: flex;
             align-items: flex-start;
-            gap: 20px;
-            margin-bottom: 30px;
+            gap: 18px;
+            margin-bottom: 25px;
         }
 
         .contact-item i {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: var(--sage-green);
             margin-top: 5px;
         }
 
         .contact-item h4 {
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 5px;
             color: var(--cream);
         }
 
         .contact-item p {
             color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
         }
 
         .contact-form {
             background: rgba(255,255,255,0.1);
-            padding: 40px;
-            border-radius: 20px;
+            padding: 35px;
+            border-radius: 18px;
             backdrop-filter: blur(10px);
         }
 
         .contact-form h3 {
-            font-size: 1.5rem;
-            margin-bottom: 25px;
+            font-size: 1.4rem;
+            margin-bottom: 22px;
             color: var(--cream);
         }
 
@@ -637,7 +687,7 @@
         footer {
             background: var(--charcoal);
             color: white;
-            padding: 40px 5%;
+            padding: 35px 5%;
             text-align: center;
         }
 
@@ -645,31 +695,31 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
+            gap: 12px;
+            margin-bottom: 18px;
         }
 
         .footer-logo svg {
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
             fill: var(--sage-green);
         }
 
         .footer-logo span {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin: 20px 0;
+            gap: 18px;
+            margin: 18px 0;
         }
 
         .social-links a {
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
             background: rgba(255,255,255,0.1);
             border-radius: 50%;
             display: flex;
@@ -690,28 +740,41 @@
             font-size: 0.9rem;
         }
 
-        /* Amharic Text Styles */
-        .amharic {
-            font-family: 'Noto Sans Ethiopic', sans-serif;
-            display: none;
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
         }
 
-        body.amharic-mode .english {
-            display: none;
-        }
-
-        body.amharic-mode .amharic {
-            display: block;
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* Responsive */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+
+            .service-card {
+                padding: 35px 25px;
             }
 
             .contact-container {
@@ -725,30 +788,25 @@
             .values {
                 gap: 30px;
             }
-        }
 
-        /* Scroll Animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
+            .approach-list {
+                flex-direction: column;
+                gap: 12px;
+            }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+            .outcomes-grid {
+                gap: 15px;
+            }
+
+            .outcome-item {
+                min-width: 140px;
+                padding: 20px 15px;
+            }
         }
     </style>
 <base target="_blank">
-<base target="_blank">
 </head>
 <body>
-    <!-- Language Toggle -->
-    <div class="lang-toggle">
-        <button class="lang-btn active" onclick="setLanguage('en')">English</button>
-        <button class="lang-btn" onclick="setLanguage('am')">አማርኛ</button>
-    </div>
-
     <!-- Navigation -->
     <nav id="navbar">
         <a href="#" class="logo">
@@ -763,10 +821,10 @@
             <span class="logo-text">Mender</span>
         </a>
         <ul class="nav-links">
-            <li><a href="#services" class="english">Services</a><a href="#services" class="amharic">አገልግሎቶች</a></li>
-            <li><a href="#about" class="english">About</a><a href="#about" class="amharic">ስለ እኛ</a></li>
-            <li><a href="#booking" class="english">Book Session</a><a href="#booking" class="amharic">ጊዜ ይያዙ</a></li>
-            <li><a href="#contact" class="english">Contact</a><a href="#contact" class="amharic">አግኙን</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#booking">Book Session</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -781,28 +839,14 @@
                     <path d="M50 50 L50 85" stroke="currentColor" stroke-width="3"/>
                 </svg>
             </div>
-            <h1 class="english">Mender Holistic Center</h1>
-            <h1 class="amharic">መንደር ሆሊስቲክ ማዕከል</h1>
-            <p class="hero-tagline english">Rooted in Compassion and Science</p>
-            <p class="hero-tagline amharic">በርህራሄ እና በሳይንስ የተመሰረተ</p>
-            <p style="color: var(--terracotta); font-size: 1rem; margin-top: 10px; font-family: 'Cormorant Garamond', serif;">
-                
-                <span class="english"></span>
-                <span class="amharic"></span>
-            </p>
-            <p class="hero-description english">
-                Personalized meditation instruction, coaching, holistic counseling and behavior modification delivered online or in the comfort of your own home. 
-                Our approach is building step-by-step daily habits towards conscious living that leads to effective stress management, 
-                transformation, inner peace, and harmony.
-            </p>
-            <p class="hero-description amharic">
-                የጥሞና ጊዜ አወሳሰድ መመሪያ። ሁለንተናዊ የምክር አገልግሎት የባህሪ ማስተካከያ ድጋፍ እቤቶ ደረስ ወይም በ ቅጥታ መስመር እናቀርባለን። ቀስ በቀስ በነቃ መንፈስ የሚደረግ የየቀን ልማድ የተሻለ ጭንቀትን ማስወገጃ ሰልት እንዲሁም የውስጥ ሰላም እና ሀብርት መንገድ እንደሆነ እናምናለን።
+            <h1>Expat Anxiety & Adjustment Support</h1>
+            <p class="hero-tagline">Rooted in Compassion and Science</p>
+            <p class="hero-description">
+                Living abroad brings unique emotional challenges — anxiety, overthinking, loneliness, and the overwhelm of constant adjustment. You don't have to navigate this alone. I will walk with you to manage anxiety, reduce overthinking, combat loneliness, and find balance and calm. Using cognitive behavioral therapy, mindfulness practice, and science-based tools, I help expats gain relief, clarity, and emotional stability while adjusting to life in a new country.
             </p>
             <div class="cta-buttons">
-                <a href="#booking" class="btn btn-primary english">Begin Your Journey</a>
-                <a href="#booking" class="btn btn-primary amharic">ጉዞዎን ይጀምሩ</a>
-                <a href="#services" class="btn btn-secondary english">Explore Services</a>
-                <a href="#services" class="btn btn-secondary amharic">አገልግሎቶችን ይመልከቱ</a>
+                <a href="#booking" class="btn btn-primary">Start Your Journey</a>
+                <a href="#services" class="btn btn-secondary">How I Can Help</a>
             </div>
         </div>
     </section>
@@ -810,148 +854,145 @@
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="section-header">
-            <h2 class="english">Our Services</h2>
-            <h2 class="amharic">አገልግሎቶቻችን</h2>
-            <p class="english">Personalized support for your journey toward wholeness and wellbeing</p>
-            <p class="amharic">ወደ መረጡት ጉዞ ከሞያዊ ድጋፍ ጋር</p>
+            <h2>How I Walk With You</h2>
+            <p>Practical support for expats managing anxiety, emotional stress, and life transitions abroad</p>
         </div>
 
         <div class="services-grid">
             <div class="service-card fade-in">
-                <img src="https://i.imgur.com/pTR9qiF.jpeg" alt="Meditation" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px 15px 0 0; margin-bottom: 20px;">
                 <div class="service-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Manage Anxiety & Overthinking</h3>
+                <p>I will walk with you to calm your mind, reduce anxiety, and stop the cycle of racing thoughts using proven CBT techniques.</p>
+            </div>
+
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Reduce Emotional Stress & Overwhelm</h3>
+                <p>I will walk with you to manage emotional overwhelm, find relief, and build resilience during challenging transitions.</p>
+            </div>
+
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-user-friends"></i>
+                </div>
+                <h3>Combat Loneliness & Reconnect</h3>
+                <p>I will walk with you to overcome isolation, rebuild connection, and feel emotionally supported even far from home.</p>
+            </div>
+
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3>Find Balance & Emotional Stability</h3>
+                <p>I will walk with you to create calm, gain clarity, and develop daily habits that bring lasting emotional balance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes Section -->
+    <section class="outcomes">
+        <div class="section-header">
+            <h2>Your Outcome</h2>
+            <p>What you will gain from walking this path together</p>
+        </div>
+
+        <div class="outcomes-grid">
+            <div class="outcome-item fade-in">
+                <div class="outcome-icon">
                     <i class="fas fa-spa"></i>
                 </div>
-                <h3 class="english">Meditation</h3>
-                <h3 class="amharic">ጥሞና</h3>
-                <p class="english">Guided practices to cultivate mindfulness, reduce stress, and discover inner stillness. Learn techniques to center yourself in daily life.</p>
-                <p class="amharic">ሀሳብን ለማጥራት፣ ጭንቀትን ለመቀነስ እና ውስጣዊ ጸጥታን ለማግኘት የሚረዱ ልምምዶች።</p>
-                <span class="service-tag english">Online & In-Person</span>
-                <span class="service-tag amharic">በመስመር ላይ እና በአካል</span>
+                <h4>Calm Your Mind</h4>
+                <p>Find inner peace and quiet the mental noise</p>
             </div>
 
-            <div class="service-card fade-in">
-                <img src="https://kimi-web-img.moonshot.cn/img/t4.ftcdn.net/7782f3a9bf81f1627c6a4ffe959a83e0db6bb8ca.jpg" alt="Holistic Counseling" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px 15px 0 0; margin-bottom: 20px;">
-                <div class="service-icon">
-                    <i class="fas fa-hands-holding-heart"></i>
+            <div class="outcome-item fade-in">
+                <div class="outcome-icon">
+                    <i class="fas fa-compress-arrows-alt"></i>
                 </div>
-                <h3 class="english">Holistic Counseling</h3>
-                <h3 class="amharic">ሆሊስቲክ ምክር</h3>
-                <p class="english">An integrative approach addressing body, mind, and spirit. We explore lifestyle, relationships, and personal patterns to support your overall wellbeing.</p>
-                <p class="amharic">አካል ልብ እና ነፍስ ለማድስ የተዋሃደ አቀራረብ። የኑሮ ዘይቤን፣ ግንኙነቶችን እና የግል ልማዶችን እንመረምራለን።</p>
-                <span class="service-tag english">Door-to-Door Available</span>
-                <span class="service-tag amharic">በመስመር ላይ እና በአካል</span>
+                <h4>Reduce Anxiety</h4>
+                <p>Stop overthinking and regain control</p>
             </div>
 
-            <div class="service-card fade-in">
-                <img src="https://kimi-web-img.moonshot.cn/img/images.squarespace-cdn.com/9fd45958dab46e5766213d42da954d2866ecca9a.png" alt="Child Behavior Modification" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px 15px 0 0; margin-bottom: 20px;">
-                <div class="service-icon">
-                    <i class="fas fa-child"></i>
+            <div class="outcome-item fade-in">
+                <div class="outcome-icon">
+                    <i class="fas fa-feather-alt"></i>
                 </div>
-                <h3 class="english">Child Behavior Modification</h3>
-                <h3 class="amharic">የህጻናት ባህሪ ማስተካከያ</h3>
-                <p class="english">Supporting children with emotional regulation, character development, social skills, and communication skills through compassionate, age-appropriate guidance.</p>
-                <p class="amharic">ህጻናትን የባህሪ ዕድገት፣ ማህበራዊ ክህሎቶች እና የግንኙነት ክህሎቶችን ማረም እና በእድሜ የሚስማማ መመሪያ ለማገዝ።</p>
-                <span class="service-tag english">Children & Adolescents</span>
-                <span class="service-tag amharic">በመስመር ላይ እና በአካል</span>
+                <h4>Gain Relief</h4>
+                <p>Release the weight of emotional stress</p>
             </div>
 
-            <div class="service-card fade-in">
-                <img src="https://kimi-web-img.moonshot.cn/img/photos.peopleimages.com/95a28526bff3b70de15c8f167ef32df077ae04c1.jpg" alt="Support for Parents" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px 15px 0 0; margin-bottom: 20px;">
-                <div class="service-icon">
-                    
+            <div class="outcome-item fade-in">
+                <div class="outcome-icon">
+                    <i class="fas fa-eye"></i>
                 </div>
-                <h3 class="english">Support for Parents</h3>
-                <h3 class="amharic">ለወላጆች ድጋፍ</h3>
-                <p class="english">Cognitive behavioral strategies to help parents of children with special needs manage daily challenges, build resilience, and find balance.</p>
-                <p class="amharic">ልዩ ፍላጎት ያላቸው ልጆች ላላቸው ወላጆች የዕለት ተዕለት ጥያቄዎችን ለማስተናገድ፣ ጽናትን ለመገንባት እና ሚዛንን ለማግኘት ለወላጆች የአስተሳሰብ ባህሪ ስልቶች።</p>
-                <span class="service-tag english">Stress Management</span>
-                <span class="service-tag amharic">የጭንቀት አስተዳደር</span>
+                <h4>Find Clarity</h4>
+                <p>See your path forward with confidence</p>
             </div>
 
-            <div class="service-card fade-in">
-                <img src="https://kimi-web-img.moonshot.cn/img/thumbs.dreamstime.com/bfe2d98335cb2e404ff52094d8e0e93a15225250.jpg" alt="Self-Development Coaching" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px 15px 0 0; margin-bottom: 20px;">
-                <div class="service-icon">
-                    <i class="fas fa-mountain"></i>
+            <div class="outcome-item fade-in">
+                <div class="outcome-icon">
+                    <i class="fas fa-anchor"></i>
                 </div>
-                <h3 class="english">Self-Development Coaching</h3>
-                <h3 class="amharic">ራስን የመለወጥ ስልጠና</h3>
-                <p class="english">Personalized coaching to unlock your potential, establish healthy routines, and create meaningful goals aligned with your values.</p>
-                <p class="amharic">ፍላጎትዎን ለማስፈን፣ ጤናማ ልማዶችን ለማቋቋም እና ከእሴቶችዎ ጋር የሚስማሙ ትርጉም ያላቸው ግቦችን ለመፍጠር።</p>
-                <span class="service-tag english">Goal Oriented</span>
-                <span class="service-tag amharic">ግብ ያነጣጠረ</span>
+                <h4>Emotional Stability</h4>
+                <p>Build a foundation that lasts</p>
             </div>
-
-            <div class="service-card fade-in">
-                <img src="https://kimi-web-img.moonshot.cn/img/images.stockcake.com/23702b552d1010a9afc20b694fb6dc45585dcc3e.jpg" alt="Talk Cafe" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px 15px 0 0; margin-bottom: 20px;">
-                <div class="service-icon">
-                    <i class="fas fa-mug-hot"></i>
-                </div>
-                <h3 class="english">Talk Café</h3>
-                <h3 class="amharic">የውይይት ካፌ</h3>
-                <p class="english">A warm space for connection and conversation. Combat isolation through meaningful dialogue, either virtually or in person, with compassionate listeners.</p>
-                <p class="amharic">የግንኙነት እና የውይይት መስመር ከልብ ከሚያደምጡ ጆሮዎች ጋር ትርጉም ያለው ውይይት ማድረግ ሲፈልጉ።</p>
-                <span class="service-tag english">Virtual & Physical</span>
-                <span class="service-tag amharic">በመስመር ላይ እና በአካል</span>
-            </div>
-
-            
         </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
         <div class="about-container">
-            <h2 class="english">Our Philosophy</h2>
-            <h2 class="amharic">ፍልስፍናችን</h2>
-            <p class="about-text english">
-                At Mender, we believe in the innate capacity of every individual to grow and flourish. 
-                We are not a clinical treatment center—we are a sanctuary for self-discovery and personal evolution. 
-                Our approach combines evidence-based practices with deep compassion, creating a nurturing environment 
-                where you can develop new perspectives, healthy habits, and daily routines that support your journey toward wholeness.
-                <br><br>
-                Your unique journey matters deeply to us. We believe no single program fits all—instead, we thoughtfully craft personalized pathways, honoring the wonderful individuality of each person.
-            </p>
-            <p class="about-text amharic">
-                በመንደር፣ እያንዳንዱ ሰው እንዲያድግ እና እንዲያብብ ያለውን ተፈጥሯዊ አቅም እናምናለን። 
-                እኛ የቴክኒካዊ ህክምና ማዕከል አይደለንም—የራስን ለማወቅ እና የግል ዕድገት መጠጊያ ነን። 
-                የምንሰጠው አገልግሎት በሳይንስ የተረጋገጠ ልምምድን ከጥልቅ ርህራሄ ጋር ያጣምራል።
-                <br><br>
-                የእርሶ የተለየ ጉዞ ለእኛ ግድ ይለናል። ለሁሉም የሚሰራ ወጥ ፕሮግራም አለ ብለን አናምንም—ይልቁንም እያንዳንዱ ሰው ድንቅ ልዩነት እንዳለው ሁሉ ለያንዳንዱ የግል ጉዞ የሚያስፈልገውን መንገድ በጥብብ አብርን እንሰራለን።
+            <h2>My Approach</h2>
+            <p class="about-text">
+                I understand the expat experience — the late-night overthinking, the waves of anxiety, the loneliness that creeps in when you least expect it. I will walk with you through this, not as someone who has all the answers, but as a companion on the journey. Together, we will use evidence-based tools to manage anxiety, reduce overthinking, and find the balance and calm that feel out of reach right now.
             </p>
 
-            
-
-            
+            <div class="approach-box">
+                <h3>Methods I Use</h3>
+                <div class="approach-list">
+                    <div class="approach-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Cognitive Behavioral Therapy</span>
+                    </div>
+                    <div class="approach-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Mindfulness Practice</span>
+                    </div>
+                    <div class="approach-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Science-Based Habit Formation</span>
+                    </div>
+                </div>
+            </div>
 
             <div class="values">
                 <div class="value-item">
                     <div class="value-icon">
-                        <i class="fas fa-leaf"></i>
+                        <i class="fas fa-hand-holding-heart"></i>
                     </div>
-                    <h4 class="english">Growth</h4>
-                    <h4 class="amharic">ዕድገት</h4>
+                    <h4>Compassion</h4>
                 </div>
                 <div class="value-item">
                     <div class="value-icon">
-                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-microscope"></i>
                     </div>
-                    <h4 class="english">Awareness</h4>
-                    <h4 class="amharic">ግንዛቤ</h4>
+                    <h4>Science</h4>
                 </div>
                 <div class="value-item">
                     <div class="value-icon">
-                        <i class="fas fa-dove"></i>
+                        <i class="fas fa-walking"></i>
                     </div>
-                    <h4 class="english">Peace</h4>
-                    <h4 class="amharic">ሰላም</h4>
+                    <h4>Walking With You</h4>
                 </div>
                 <div class="value-item">
                     <div class="value-icon">
-                        <i class="fas fa-sync-alt"></i>
+                        <i class="fas fa-lightbulb"></i>
                     </div>
-                    <h4 class="english">Habits</h4>
-                    <h4 class="amharic">ልማዶች</h4>
+                    <h4>Practical Change</h4>
                 </div>
             </div>
         </div>
@@ -960,33 +1001,25 @@
     <!-- How It Works -->
     <section class="how-it-works">
         <div class="section-header">
-            <h2 class="english">How It Works</h2>
-            <h2 class="amharic">እንዴት እንደሚሰራ</h2>
-            <p class="english">Simple steps to begin your wellness journey</p>
-            <p class="amharic">የጤና ጉዞዎን ለመጀመር ቀላል ደረጃዎች</p>
+            <h2>How It Works</h2>
+            <p>Simple steps to start feeling supported and grounded</p>
         </div>
 
         <div class="steps">
             <div class="step fade-in">
                 <div class="step-number">1</div>
-                <h3 class="english">Choose Your Service</h3>
-                <h3 class="amharic">አገልግሎትዎን ይምረጡ</h3>
-                <p class="english">Browse our offerings and select what resonates with your current needs</p>
-                <p class="amharic">አገልግሎቶቻችንን ይመልከቱ እና ከአሁኑ ፍላጎቶችዎ ጋር የሚስማማውን ይምረጡ</p>
+                <h3>Book a Free Consultation</h3>
+                <p>Schedule a 20-minute call to share what you're experiencing and see if we're a good fit</p>
             </div>
             <div class="step fade-in">
                 <div class="step-number">2</div>
-                <h3 class="english">Book a Session</h3>
-                <h3 class="amharic">ጊዜ ይያዙ</h3>
-                <p class="english">Schedule online or request door-to-door service anywhere in Dubai</p>
-                <p class="amharic">በመስመር ላይ ይያዙ ወይም በዱባይ ውስጥ በማንኛውም ቦታ ከበር ወደ በር አገልግሎት ይጠይቁ</p>
+                <h3>Personalized Sessions</h3>
+                <p>We'll meet online at times that work for your schedule, wherever you are in the world</p>
             </div>
             <div class="step fade-in">
                 <div class="step-number">3</div>
-                <h3 class="english">Begin Transformation</h3>
-                <h3 class="amharic">ለውጥ ይጀምሩ</h3>
-                <p class="english">Engage in supportive sessions designed for your personal growth</p>
-                <p class="amharic">ለግል ዕድገትዎ የተዘጋጁ ድጋፍ ስብሰባዎችን ያሳትፉ</p>
+                <h3>Build Lasting Change</h3>
+                <p>Develop practical skills to manage anxiety, reduce stress, and find emotional stability</p>
             </div>
         </div>
     </section>
@@ -995,10 +1028,8 @@
     <section class="booking" id="booking">
         <div class="booking-container">
             <div class="section-header">
-                <h2 class="english">Book Your Session</h2>
-                <h2 class="amharic">ስብሰባዎን ይያዙ</h2>
-                <p class="english">Take the first step toward your wellbeing</p>
-                <p class="amharic">ወደ ጤናዎ የመጀመሪያውን ደረጃ ይውሰዱ</p>
+                <h2>Book Your Session</h2>
+                <p>Take the first step toward calm, clarity, and emotional balance</p>
             </div>
 
             <form id="bookingForm" action="https://formspree.io/f/xdalqkwj" method="POST">
@@ -1006,78 +1037,61 @@
                 <input type="hidden" name="_next" value="https://menderholistic.com/booking-confirmed.html">
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="english">Full Name</label>
-                        <label class="amharic">ሙሉ ስም</label>
+                        <label>Full Name</label>
                         <input type="text" name="full_name" required>
                     </div>
                     <div class="form-group">
-                        <label class="english">Phone Number</label>
-                        <label class="amharic">ስልክ ቁጥር</label>
+                        <label>Phone Number</label>
                         <input type="tel" name="phone" placeholder="+971" required>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="english">Email</label>
-                        <label class="amharic">ኢሜይል</label>
+                        <label>Email</label>
                         <input type="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label class="english">Preferred Language</label>
-                        <label class="amharic">የሚመርጡት ቋንቋ</label>
-                        <select name="preferred_language" required>
-                            <option value="">English / አማርኛ</option>
-                            <option value="english">English</option>
-                            <option value="amharic">አማርኛ (Amharic)</option>
-                            <option value="both">Both / ሁለቱም</option>
-                        </select>
+                        <label>Your Location/Time Zone</label>
+                        <input type="text" name="location" placeholder="e.g., Dubai, GMT+4" required>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="english">Select Service</label>
-                    <label class="amharic">አገልግሎት ይምረጡ</label>
-                    <select name="service" required>
-                        <option value="" class="english">Choose a service...</option>
-                        <option value="" class="amharic">አገልግሎት ይምረጡ...</option>
-                        <option value="meditation">Meditation / ጥሞና</option>
-                        <option value="counseling">Holistic Counseling / ሆሊስቲክ ምክር</option>
-                        <option value="behavior">Child Behavior Modification / የህጻናት ባህሪ ማስተካከያ</option>
-                        <option value="parents">Support for Parents / ለወላጆች ድጋፍ</option>
-                        <option value="coaching">Self-Development / ራስን የመለወጥ ስልጠና</option>
-                        <option value="talkcafe">Talk Café / የውይይት ካፌ</option>
+                    <label>What brings you here?</label>
+                    <select name="primary_concern" required>
+                        <option value="">Select your main concern...</option>
+                        <option value="anxiety">Managing anxiety & overthinking</option>
+                        <option value="stress">Reducing emotional stress & overwhelm</option>
+                        <option value="loneliness">Combating loneliness & isolation</option>
+                        <option value="transition">Expat adjustment challenges</option>
+                        <option value="balance">Finding balance & calm</option>
+                        <option value="other">Something else</option>
                     </select>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="english">Session Type</label>
-                        <label class="amharic">የስብሰባ አይነት</label>
+                        <label>Preferred Session Type</label>
                         <select name="session_type" required>
-                            <option value="online">Online / በመስመር ላይ</option>
-                            <option value="door">Door-to-Door / ከበር ወደ በር</option>
-                            <option value="inperson">In-Person / በአካል</option>
+                            <option value="consultation">Free 20-min Consultation</option>
+                            <option value="single">Single Session</option>
+                            <option value="package">Session Package</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label class="english">Preferred Date</label>
-                        <label class="amharic">የሚፈልጉ ቀን</label>
-                        <input type="date" name="preferred_date" required>
+                        <label>Preferred Day/Time</label>
+                        <input type="text" name="preferred_time" placeholder="e.g., Weekday evenings" required>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="english">Additional Notes</label>
-                    <label class="amharic">ተጨማሪ ማስታወሻዎች</label>
-                    <textarea name="additional_notes" rows="4" placeholder="Tell us about your goals..."></textarea>
+                    <label>Tell me about your situation</label>
+                    <textarea name="message" rows="4" placeholder="Where are you located? What challenges are you facing? What are you hoping to achieve?" required></textarea>
                 </div>
 
-                
-
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 30px;">
-                    <span class="english">Confirm Booking</span>
-                    <span class="amharic">አስያይ ያረጋግጡ</span>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 25px;">
+                    Request a Session
                 </button>
             </form>
         </div>
@@ -1087,14 +1101,12 @@
     <section class="contact" id="contact">
         <div class="contact-container">
             <div class="contact-info">
-                <h2 class="english">Get in Touch</h2>
-                <h2 class="amharic">አግኙን</h2>
+                <h2>Get in Touch</h2>
 
                 <div class="contact-item">
                     <i class="fab fa-whatsapp" style="color: #25D366;"></i>
                     <div>
-                        <h4 class="english">WhatsApp / Phone</h4>
-                        <h4 class="amharic">ዋትስአፕ / ስልክ</h4>
+                        <h4>WhatsApp / Phone</h4>
                         <p>
                             <a href="https://wa.me/971508505701" target="_blank" style="color: #25D366; text-decoration: none; font-weight: 600;">+971 50 850 5701</a>
                         </p>
@@ -1104,8 +1116,7 @@
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
                     <div>
-                        <h4 class="english">Email</h4>
-                        <h4 class="amharic">ኢሜይል</h4>
+                        <h4>Email</h4>
                         <p>hello@menderholistic.com</p>
                     </div>
                 </div>
@@ -1113,32 +1124,28 @@
                 <div class="contact-item">
                     <i class="fas fa-globe"></i>
                     <div>
-                        <h4 class="english">Service Area</h4>
-                        <h4 class="amharic">የአገልግሎት አካባቢ</h4>
-                        <p class="english">Dubai, UAE - Door to Door and Online Worldwide</p>
-                        <p class="amharic">ዱባይ፣ ኢኤኤ - ከበር ወደ በር እና በመስመር ላይ በመላው ዓለም</p>
+                        <h4>Service Area</h4>
+                        <p>Online Sessions Worldwide — Supporting Expats Everywhere</p>
                     </div>
                 </div>
             </div>
 
             <div class="contact-form">
-                <h3 class="english">Send us a Message</h3>
-                <h3 class="amharic">መልእክት ይላኩልን</h3>
+                <h3>Send a Quick Message</h3>
                 <form action="https://formspree.io/f/xdalqkwj" method="POST">
                     <input type="hidden" name="_subject" value="New Contact Message from Mender Website">
                     <input type="hidden" name="_next" value="https://menderholistic.com/thanks.html">
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name / ስም" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Email / ኢሜይል" required>
+                        <input type="email" name="email" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" rows="4" placeholder="Your message / መልእክት" required></textarea>
+                        <textarea name="message" rows="4" placeholder="Your message" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%;">
-                        <span class="english">Send Message</span>
-                        <span class="amharic">መልእክት ላክ</span>
+                        Send Message
                     </button>
                 </form>
             </div>
@@ -1161,28 +1168,13 @@
             <a href="#"><i class="fab fa-telegram-plane"></i></a>
         </div>
 
-        <p class="footer-text english">Rooted in Compassion and Science | Dubai, UAE</p>
-        <p class="footer-text amharic">በርህራሄ እና በሳይንስ የተመሰረተ | ዱባይ፣ ኢ.ኤ.ኤ</p>
+        <p class="footer-text">Rooted in Compassion and Science | Supporting Expats Worldwide</p>
         <p style="margin-top: 10px; color: rgba(255,255,255,0.4); font-size: 0.8rem;">
             © 2025 Mender Holistic Center. All rights reserved.
         </p>
     </footer>
 
     <script>
-        // Language Toggle
-        function setLanguage(lang) {
-            document.body.classList.toggle('amharic-mode', lang === 'am');
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-        }
-
-        // Form validation
-        function validateForm(form) {
-            return form.checkValidity();
-        }
-
         // Scroll Animation
         const observerOptions = {
             threshold: 0.1,
@@ -1208,10 +1200,6 @@
                 navbar.classList.remove('scrolled');
             }
         });
-
-        // Form Submission
-        // Formspree handles the form submission automatically
-        // Success page will be shown after submission
 
         // Smooth Scroll for Navigation Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
