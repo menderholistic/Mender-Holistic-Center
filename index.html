@@ -6,7 +6,7 @@
     <meta http-equiv="Expires" content="0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mender Holistic Center | Rooted in Compassion & Science</title>
+    <title>Mender Expat Support | Rooted in Compassion & Science</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?v=2">
     <style>
@@ -384,6 +384,190 @@
             line-height: 1.6;
         }
 
+        /* Blog Section Styles */
+        .blog {
+            padding: 80px 5%;
+            background: linear-gradient(135deg, #F8FBF6 0%, #FFFFFF 100%);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-card {
+            background: var(--cream);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(156, 175, 136, 0.15);
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--sage-green), var(--deep-forest));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z" fill="rgba(255,255,255,0.1)" fill-rule="evenodd"/></svg>');
+            opacity: 0.3;
+        }
+
+        .blog-content {
+            padding: 25px;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: var(--terracotta);
+            font-weight: 500;
+        }
+
+        .blog-category {
+            background: rgba(156, 175, 136, 0.15);
+            padding: 4px 12px;
+            border-radius: 20px;
+            color: var(--deep-forest);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .blog-card h3 {
+            font-size: 1.25rem;
+            color: var(--deep-forest);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            color: var(--charcoal);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more {
+            color: var(--sage-green);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--deep-forest);
+            gap: 12px;
+        }
+
+        .blog-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .blog-modal.active {
+            display: flex;
+        }
+
+        .blog-modal-content {
+            background: var(--cream);
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            border-radius: 20px;
+            padding: 50px;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--deep-forest);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:hover {
+            background: var(--sage-green);
+            color: white;
+        }
+
+        .blog-modal-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--warm-sand);
+        }
+
+        .blog-modal h2 {
+            font-size: 2rem;
+            color: var(--deep-forest);
+            margin-bottom: 15px;
+        }
+
+        .blog-modal-body {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--charcoal);
+        }
+
+        .blog-modal-body p {
+            margin-bottom: 20px;
+        }
+
         /* About Section */
         .about {
             padding: 90px 5%;
@@ -569,6 +753,88 @@
             color: var(--charcoal);
             font-size: 0.92rem;
             line-height: 1.6;
+        }
+
+        /* Why Work With Me Section */
+        .why-me {
+            padding: 80px 5%;
+            background: var(--warm-white);
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 900px;
+            margin: 40px auto 0;
+        }
+
+        .credential-card {
+            background: var(--cream);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: left;
+            border: 1px solid rgba(156, 175, 136, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .credential-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+        }
+
+        .credential-card h3 {
+            color: var(--deep-forest);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .credential-card h3 i {
+            color: var(--sage-green);
+            font-size: 1.3rem;
+        }
+
+        .credential-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .credential-card li {
+            padding: 8px 0;
+            color: var(--charcoal);
+            font-size: 0.95rem;
+            position: relative;
+            padding-left: 25px;
+            line-height: 1.5;
+        }
+
+        .credential-card li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--sage-green);
+            font-weight: bold;
+        }
+
+        .closing-statement {
+            max-width: 800px;
+            margin: 50px auto 0;
+            text-align: center;
+            padding: 35px;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--warm-white) 100%);
+            border-radius: 18px;
+            border-left: 4px solid var(--sage-green);
+        }
+
+        .closing-statement p {
+            font-size: 1.1rem;
+            color: var(--deep-forest);
+            line-height: 1.8;
+            font-style: italic;
+            margin: 0;
         }
 
         /* Booking Section */
@@ -757,6 +1023,12 @@
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            .credentials-grid {
+                grid-template-columns: 1fr;
+            }
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
@@ -802,8 +1074,18 @@
                 min-width: 140px;
                 padding: 20px 15px;
             }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+
+            .blog-modal-content {
+                padding: 30px 25px;
+            }
         }
     </style>
+<base target="_blank">
 <base target="_blank">
 </head>
 <body>
@@ -823,6 +1105,8 @@
         <ul class="nav-links">
             <li><a href="#services">Services</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#why-me">Why Me</a></li>
+            <li><a href="#blog">Blog</a></li>
             <li><a href="#booking">Book Session</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -839,10 +1123,10 @@
                     <path d="M50 50 L50 85" stroke="currentColor" stroke-width="3"/>
                 </svg>
             </div>
-            <h1 style="font-size: 1.9rem; font-weight: 600; letter-spacing: -0.3px; line-height: 1.3;">Feel Less Alone with Real, Consistent Conversation</h1>
+            <h1 style="font-size: 1.9rem; font-weight: 600; letter-spacing: -0.3px; line-height: 1.3;">Helping expats feel calmer, grounded, and supported—no matter where life abroad takes you.</h1>
             <p class="hero-tagline">Rooted in Compassion and Science</p>
             <p class="hero-description">
-                When loneliness hits—especially at night or during overthinking—you don't have to deal with it by yourself anymore. I support adults struggling with anxiety, overthinking, loneliness, and the overwhelm of major life transitions, including those adjusting to life abroad as expats. I help you gain relief, clarity, and emotional stability. Together, we'll find the balance and calm that feel out of reach right now.
+                Life as an expat can be exciting—but it can also feel isolating, stressful, and overwhelming. I provide practical, guided support to help you reset, reduce stress, and feel connected so you can thrive while living abroad. Whether you're navigating the challenges of raising children far from family, struggling with loneliness, or finding it hard to adjust to a new culture, you don't have to face these transitions alone. Together, we'll find the balance and calm that feel out of reach right now.
             </p>
             
         </div>
@@ -855,37 +1139,29 @@
             <h2>Who is this for?</h2>
         </div>
 
-        <div class="services-grid" style="max-width: 1000px;">
+        <div class="services-grid" style="max-width: 1000px; grid-template-columns: repeat(3, 1fr);">
             <div class="service-card fade-in">
                 <div class="service-icon">
-                    <i class="fas fa-user-slash"></i>
+                    <i class="fas fa-baby"></i>
                 </div>
-                <h3>You feel you have no one to talk to</h3>
-                <p>When you need to vent, process, or simply be heard—but there's no one there who truly understands or has the space to listen.</p>
+                <h3>Expat Parents Balancing It All</h3>
+                <p>You're raising children abroad while managing work and family life, often without the support network of grandparents, relatives, or close friends back home. The juggle feels exhausting and isolating.</p>
             </div>
 
             <div class="service-card fade-in">
                 <div class="service-icon">
                     <i class="fas fa-brain"></i>
                 </div>
-                <h3>You overthink a lot when you're alone</h3>
-                <p>Your mind races at night or during quiet moments, turning small worries into overwhelming spirals you can't escape.</p>
+                <h3>You overthink and feel disconnected</h3>
+                <p>Your mind races with worries about adapting to a new culture, your family's wellbeing, or whether you made the right choice. You feel isolated even when surrounded by others, unable to shake the loneliness.</p>
             </div>
 
             <div class="service-card fade-in">
                 <div class="service-icon">
-                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-suitcase"></i>
                 </div>
-                <h3>Nights feel the hardest</h3>
-                <p>When the world quiets down, everything feels heavier. The silence amplifies your thoughts and the loneliness becomes unbearable.</p>
-            </div>
-
-            <div class="service-card fade-in">
-                <div class="service-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <h3>You feel disconnected even around people</h3>
-                <p>You're surrounded by others but feel invisible. Conversations feel shallow, and no one seems to notice you're struggling.</p>
+                <h3>Difficult Transition or Adjustment</h3>
+                <p>Moving abroad brought unexpected challenges. You're struggling to find your footing, build meaningful connections, or create a sense of home in this new place. The adjustment feels harder than you anticipated.</p>
             </div>
         </div>
     </section>
@@ -1027,7 +1303,7 @@
         <div class="about-container">
             <h2>My Approach</h2>
             <p class="about-text">
-                I believe healing happens through genuine conversation and human connection. My role is to walk beside you as a fellow traveler—creating a warm, judgment-free space where you can speak openly about what you're experiencing. Whether you're navigating life in your home country or adjusting to a new environment abroad, I meet you where you are. Through consistent, compassionate dialogue, we build trust that allows you to reconnect with your own inner wisdom and strength. This isn't about fixing you; it's about rediscovering the clarity and balance that are already within you.
+                I believe growth happens through genuine conversation and human connection. My role is to walk beside you as a fellow traveler—creating a warm, judgment-free space where you can speak openly about what you're experiencing. Whether you're navigating the complexities of parenting abroad, adjusting to a new culture, or struggling with the isolation that comes from being far from home, I meet you where you are. Through consistent, compassionate dialogue, we build trust that allows you to reconnect with your own inner wisdom and strength. This isn't about fixing you; it's about rediscovering the clarity and balance that are already within you.
             </p>
 
             <div class="approach-box">
@@ -1081,6 +1357,141 @@
         </div>
     </section>
 
+    <!-- Why Work With Me Section -->
+    <section class="why-me" id="why-me">
+        <div class="section-header">
+            <h2>Why Work With Me?</h2>
+            <p>Professional expertise meets real-world understanding of expat life</p>
+        </div>
+
+        <div class="credentials-grid">
+            <div class="credential-card fade-in">
+                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                <ul>
+                    <li>MA in Developmental Psychology</li>
+                    <li>BA in Sociology and Social Work</li>
+                </ul>
+            </div>
+
+            <div class="credential-card fade-in">
+                <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                <ul>
+                    <li>Certification in Meditation Teaching</li>
+                    <li>Holistic Counseling Skills</li>
+                    <li>Cognitive Behavior Therapy (CBT)</li>
+                    <li>Meditation Therapy for Treatment of Depression and Anxiety</li>
+                </ul>
+            </div>
+
+            <div class="credential-card fade-in">
+                <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                <ul>
+                    <li>Stress management specialist</li>
+                    <li>Emotional support for expats</li>
+                    <li>Practical strategies for navigating life abroad</li>
+                    <li>Supporting families through major transitions</li>
+                </ul>
+            </div>
+
+            <div class="credential-card fade-in">
+                <h3><i class="fas fa-globe-americas"></i> Personal Connection</h3>
+                <ul>
+                    <li>I'm also an expat—I understand the unique challenges firsthand</li>
+                    <li>Real-world experience of building life away from home</li>
+                    <li>Personal insight into cultural adjustment and isolation</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="closing-statement fade-in">
+            <p>I combine professional expertise with real-world tools you can apply immediately, so you can feel relief, connection, and clarity even in the busiest or loneliest moments.</p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="section-header">
+            <h2>Weekly Insights</h2>
+            <p>Short, practical articles to support your expat journey—published fresh every week</p>
+        </div>
+
+        <div class="blog-grid">
+            <!-- Blog Post 1 -->
+            <article class="blog-card fade-in" onclick="openBlogPost(1)">
+                <div class="blog-image">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">Wellness</span>
+                        <span>April 6, 2026</span>
+                    </div>
+                    <h3>The 5-Minute Reset: Managing Overwhelm as an Expat Parent</h3>
+                    <p class="blog-excerpt">
+                        When you're juggling work, children, and the isolation of being far from home, overwhelm can hit fast. Here are three science-backed techniques you can use anywhere to recenter yourself in just five minutes...
+                    </p>
+                    <span class="read-more">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </span>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-card fade-in" onclick="openBlogPost(2)">
+                <div class="blog-image" style="background: linear-gradient(135deg, var(--soft-clay), var(--terracotta));">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">Connection</span>
+                        <span>March 30, 2026</span>
+                    </div>
+                    <h3>Why You Can Feel Lonely Even in a Crowd: The Expat Paradox</h3>
+                    <p class="blog-excerpt">
+                        It's one of the most confusing parts of expat life: being surrounded by people yet feeling completely alone. Understanding why this happens is the first step toward building the deep connections you're craving...
+                    </p>
+                    <span class="read-more">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </span>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="blog-card fade-in" onclick="openBlogPost(3)">
+                <div class="blog-image" style="background: linear-gradient(135deg, var(--deep-forest), #7A8B6E);">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">Adjustment</span>
+                        <span>March 23, 2026</span>
+                    </div>
+                    <h3>Creating "Home" When Nothing Feels Familiar</h3>
+                    <p class="blog-excerpt">
+                        Home isn't just a place—it's a feeling of safety and belonging. Learn practical ways to cultivate that sense of home within yourself and your family, no matter which country you're living in...
+                    </p>
+                    <span class="read-more">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </span>
+                </div>
+            </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="#contact" class="btn btn-secondary">Subscribe for Weekly Articles</a>
+        </div>
+    </section>
+
+    <!-- Blog Modal -->
+    <div class="blog-modal" id="blogModal">
+        <div class="blog-modal-content">
+            <button class="close-modal" onclick="closeBlogPost()">&times;</button>
+            <div id="modalContent">
+                <!-- Content injected by JavaScript -->
+            </div>
+        </div>
+    </div>
+
     <!-- How It Works -->
     <section class="how-it-works">
         <div class="section-header">
@@ -1121,7 +1532,7 @@
             </div>
 
             <form id="bookingForm" action="https://formspree.io/f/xdalqkwj" method="POST">
-                <input type="hidden" name="_subject" value="New Booking Request - Mender Holistic Center">
+                <input type="hidden" name="_subject" value="New Booking Request - Mender Expat Support">
                 <input type="hidden" name="_next" value="https://menderholistic.com/booking-confirmed.html">
                 <div class="form-row">
                     <div class="form-group">
@@ -1149,11 +1560,11 @@
                     <label>What brings you here?</label>
                     <select name="primary_concern" required>
                         <option value="">Select your main concern...</option>
+                        <option value="expat-parent">Expat parenting challenges</option>
                         <option value="anxiety">Managing anxiety & overthinking</option>
-                        <option value="stress">Reducing emotional stress & overwhelm</option>
-                        <option value="loneliness">Combating loneliness & isolation</option>
-                        <option value="transition">Expat adjustment challenges</option>
-                        <option value="balance">Finding balance & calm</option>
+                        <option value="loneliness">Feeling isolated or disconnected</option>
+                        <option value="adjustment">Difficulty adjusting to life abroad</option>
+                        <option value="balance">Work-life balance & overwhelm</option>
                         <option value="other">Something else</option>
                     </select>
                 </div>
@@ -1175,7 +1586,7 @@
 
                 <div class="form-group">
                     <label>Tell me about your situation</label>
-                    <textarea name="message" rows="4" placeholder="Where are you located? What challenges are you facing? What are you hoping to achieve?" required></textarea>
+                    <textarea name="message" rows="4" placeholder="Where are you located? What challenges are you facing as an expat or expat parent? What are you hoping to achieve?" required></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 25px;">
@@ -1221,7 +1632,7 @@
             <div class="contact-form">
                 <h3>Send a Quick Message</h3>
                 <form action="https://formspree.io/f/xdalqkwj" method="POST">
-                    <input type="hidden" name="_subject" value="New Contact Message from Mender Website">
+                    <input type="hidden" name="_subject" value="New Contact Message from Mender Expat Support Website">
                     <input type="hidden" name="_next" value="https://menderholistic.com/thanks.html">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required>
@@ -1246,7 +1657,7 @@
             <svg viewBox="0 0 100 100">
                 <path d="M50 50 Q30 20 10 30 Q5 40 20 50 Q5 60 10 70 Q30 80 50 50 Q70 80 90 70 Q95 60 80 50 Q95 40 90 30 Q70 20 50 50 Z"/>
             </svg>
-            <span>Mender Holistic Center</span>
+            <span>Mender Expat Support</span>
         </div>
 
         <div class="social-links">
@@ -1258,11 +1669,116 @@
 
         <p class="footer-text">Rooted in Compassion and Science | Supporting Expats Worldwide</p>
         <p style="margin-top: 10px; color: rgba(255,255,255,0.4); font-size: 0.8rem;">
-            © 2025 Mender Holistic Center. All rights reserved.
+            © 2025 Mender Expat Support. All rights reserved.
         </p>
     </footer>
 
     <script>
+        // Blog Posts Data
+        const blogPosts = {
+            1: {
+                title: "The 5-Minute Reset: Managing Overwhelm as an Expat Parent",
+                category: "Wellness",
+                date: "April 6, 2026",
+                content: `
+                    <p>When you're juggling work, children, and the isolation of being far from home, overwhelm can hit fast. One moment you're managing the morning routine, the next you're drowning in the realization that you have no grandparents nearby to help, no old friends to call, and dinner still needs to be made.</p>
+                    
+                    <p>As an expat parent myself, I've been there. The good news? You don't need an hour of meditation or a spa day to reset. Here are three science-backed techniques you can use anywhere to recenter yourself in just five minutes:</p>
+                    
+                    <h3 style="color: var(--deep-forest); margin: 25px 0 15px;">1. The 4-7-8 Breath</h3>
+                    <p>This technique activates your parasympathetic nervous system, signaling to your body that you're safe. Breathe in for 4 counts, hold for 7, exhale for 8. Repeat 4 times. Do this while the kids watch TV or while waiting in the car.</p>
+                    
+                    <h3 style="color: var(--deep-forest); margin: 25px 0 15px;">2. Grounding Through the Senses</h3>
+                    <p>Name 5 things you can see, 4 you can touch, 3 you can hear, 2 you can smell, and 1 you can taste. This pulls your mind out of the spiral and into the present moment.</p>
+                    
+                    <h3 style="color: var(--deep-forest); margin: 25px 0 15px;">3. The "Container" Visualization</h3>
+                    <p>Close your eyes and imagine placing all your worries into an imaginary box or container. Tell yourself, "I will return to these at 8 PM," or whenever you have support/time. This tells your brain it can stop reminding you every second.</p>
+                    
+                    <p style="margin-top: 30px; padding: 20px; background: rgba(156, 175, 136, 0.1); border-left: 4px solid var(--sage-green); border-radius: 0 8px 8px 0;">
+                        <strong>Remember:</strong> Taking five minutes to reset isn't selfish—it's necessary maintenance. You cannot pour from an empty cup, especially when you're the primary support system for your children in a foreign country.
+                    </p>
+                `
+            },
+            2: {
+                title: "Why You Can Feel Lonely Even in a Crowd: The Expat Paradox",
+                category: "Connection",
+                date: "March 30, 2026",
+                content: `
+                    <p>It's one of the most confusing parts of expat life: being surrounded by people—at school pickup, work events, expat meetups—yet feeling completely alone. You make small talk about the weather and school schedules, but no one asks how you're really doing. No one knows your history.</p>
+                    
+                    <p>This is what psychologists call "emotional loneliness" versus "social loneliness." Social loneliness is having no one around. Emotional loneliness is having no one who truly knows you.</p>
+                    
+                    <h3 style="color: var(--deep-forest); margin: 25px 0 15px;">Why Does This Happen?</h3>
+                    <p>When you move abroad, you lose what researchers call "ambient belonging"—the sense that you belong just by existing in a space. Back home, you had shared history, cultural references, people who knew your family. Here, you have to explain yourself constantly. That explaining is exhausting.</p>
+                    
+                    <h3 style="color: var(--deep-forest); margin: 25px 0 15px;">The Path to Connection</h3>
+                    <p>Deep connections take time—usually 3-6 months of consistent interaction to form true friendship. But most expat interactions stay surface-level because:</p>
+                    <ul style="margin: 15px 0; padding-left: 20px;">
+                        <li>People know they might leave soon</li>
+                        <li>Everyone is busy rebuilding their lives</li>
+                        <li>Cultural differences create invisible barriers</li>
+                    </ul>
+                    
+                    <p>The solution? Consistency over quantity. One deep conversation with someone who "gets it" is worth fifty casual coffee chats. Consider working with someone who can provide that consistent emotional presence while you build your local community.</p>
+                `
+            },
+            3: {
+                title: "Creating 'Home' When Nothing Feels Familiar",
+                category: "Adjustment",
+                date: "March 23, 2026",
+                content: `
+                    <p>Home isn't just a place—it's a feeling of safety, predictability, and belonging. When everything around you is new—the grocery store layout, the driving rules, the way people greet each other—your nervous system stays on high alert. No wonder you're exhausted.</p>
+                    
+                    <h3 style="color: var(--deep-forest); margin: 25px 0 15px;">Start With Sensory Anchors</h3>
+                    <p>Your brain creates safety through the senses. Bring familiar scents into your home (a specific candle, your usual laundry detergent). Play music that reminds you of safe times. Create a tea or coffee ritual that stays the same every morning.</p>
+                    
+                    <h3 style="color: var(--deep-forest); margin: 25px 0 15px;">Create "Micro-Homes"</h3>
+                    <p>If your whole apartment feels foreign, create one corner that feels completely yours. A reading nook. Your meditation cushion. A specific chair by the window. Make this spot sacred—no work, no chaos allowed.</p>
+                    
+                    <h3 style="color: var(--deep-forest); margin: 25px 0 15px;">Rituals Over Routine</h3>
+                    <p>Routines are about productivity. Rituals are about meaning. Create small, meaningful repetitions: Friday night pizza with your family (even if the pizza tastes different), Sunday morning walks in the same park, lighting a candle at dinner.</p>
+                    
+                    <p style="margin-top: 30px;">Most importantly, be patient with yourself. Home is a feeling that grows slowly. You don't have to love your new country immediately. You just have to create pockets of safety within it, one small ritual at a time.</p>
+                `
+            }
+        };
+
+        // Blog Modal Functions
+        function openBlogPost(id) {
+            const post = blogPosts[id];
+            const modal = document.getElementById('blogModal');
+            const content = document.getElementById('modalContent');
+            
+            content.innerHTML = `
+                <div class="blog-modal-header">
+                    <div class="blog-meta" style="margin-bottom: 15px;">
+                        <span class="blog-category">${post.category}</span>
+                        <span>${post.date}</span>
+                    </div>
+                    <h2>${post.title}</h2>
+                </div>
+                <div class="blog-modal-body">
+                    ${post.content}
+                </div>
+            `;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBlogPost() {
+            const modal = document.getElementById('blogModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('blogModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeBlogPost();
+            }
+        });
+
         // Scroll Animation
         const observerOptions = {
             threshold: 0.1,
